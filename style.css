@@ -1,0 +1,42 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Courier New', monospace; background: #0a0a0a; color: #00ff00; }
+ .header { background: #111; padding: 20px; border-bottom: 1px solid #00ff00; }
+ .header h1 { font-size: 24px; letter-spacing: 3px; }
+ .header p { color: #888; font-size: 12px; margin-top: 5px; }
+ .container { display: grid; grid-template-columns: 300px 1fr; height: calc(100vh - 80px); }
+ .sidebar { background: #111; border-right: 1px solid #333; padding: 20px; overflow-y: auto; }
+ .sidebar h2 { color: #00ff00; font-size: 14px; letter-spacing: 2px; margin-bottom: 15px; }
+ .scan-form { margin-bottom: 20px; }
+ .scan-form input { width: 100%; padding: 8px; background: #000; border: 1px solid #00ff00; color: #00ff00; font-family: monospace; margin-bottom: 8px; }
+ .scan-form button { width: 100%; padding: 8px; background: #00ff00; color: #000; border: none; font-family: monospace; font-weight: bold; cursor: pointer; }
+ .scan-form button:hover { background: #00cc00; }
+ .scan-item { padding: 8px; border: 1px solid #333; margin-bottom: 5px; cursor: pointer; font-size: 12px; }
+ .scan-item:hover { border-color: #00ff00; }
+ .scan-item.active { border-color: #00ff00; background: #001100; }
+ .main { padding: 20px; overflow-y: auto; }
+ .main h2 { color: #00ff00; font-size: 14px; letter-spacing: 2px; margin-bottom: 15px; }
+ table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #001100; color: #00ff00; padding: 10px; text-align: left; border: 1px solid #333; }
+  td { padding: 10px; border: 1px solid #222; color: #ccc; }
+  tr:hover td { background: #001100; }
+ .badge { padding: 2px 8px; border-radius: 3px; font-size: 11px; }
+ .badge-open { background: #003300; color: #00ff00; border: 1px solid #00ff00; }
+ .badge-risk { background: #330000; color: #ff4444; border: 1px solid #ff4444; }
+ .raw-output { background: #000; border: 1px solid #333; padding: 15px; font-size: 11px; color: #888; white-space: pre-wrap; margin-top: 20px; max-height: 300px; overflow-y: auto; }
+ .no-scan { color: #444; text-align: center; margin-top: 100px; font-size: 14px; }
+ .risk-ports { color: #ff4444; }
+
+ .spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #003300;
+    border-top: 3px solid #00ff00;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
