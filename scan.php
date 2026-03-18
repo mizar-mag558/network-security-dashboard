@@ -5,7 +5,7 @@ function runScan($ip) {
     global $pdo;
     
     // Run nmap scan
-    $output = shell_exec("timeout 120 nmap -T4 --open " . escapeshellarg($ip) . " 2>&1");
+    $output = shell_exec("timeout 60 nmap -T4 -sn " . escapeshellarg($ip) . " 2>&1");
     
     // Save scan to database
     $stmt = $pdo->prepare("INSERT INTO scans (ip_address, scan_date, raw_output) VALUES (?, NOW(), ?)");
